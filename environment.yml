@@ -1,0 +1,11 @@
+name: openai
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab
+  - openai
+  - ca-certificates
+  - certifi
+  - openssl
+  - python-dotenv
+prefix: /home/gjb/mambaforge/envs/openai
