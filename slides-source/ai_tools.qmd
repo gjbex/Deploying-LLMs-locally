@@ -1,0 +1,122 @@
+---
+title: "AI tools"
+author: "[Geert Jan Bex](mailto:geertjan.bex@uhasselt.be)"
+institution: "Vlaams Supercomputer Centrum"
+format:
+  revealjs:
+    transiton: slide
+    slide-number: true
+code-annotations: select
+---
+
+## Overview
+
+- Running AI models locally
+- Using AI services
+
+
+# Local models
+
+
+## Model management
+
+Use [Ollama](https://github.com/ollama/ollama)
+
+- Run models locally
+- Pull models from the cloud (also to update)
+- List local models
+- Remove local models
+- Show model details
+
+
+## Some models
+
+::: {style="font-size: 80%"}
+| Model              | Parameters | Size  |
+|--------------------|------------|-------|
+| Llama 3.2          | 3B         | 2.0GB |
+| Llama 3.2          | 1B         | 1.3GB |
+| Llama 3.1          | 8B         | 4.7GB |
+| Llama 3.1          | 70B        | 40GB  |
+| Llama 3.1          | 405B       | 231GB |
+| Gemma 2            | 2B         | 1.6GB |
+| Mistral            | 7B         | 4.1GB |
+| Code Llama         | 7B         | 3.8GB |
+| Llama 2 Uncensored | 7B         | 3.8GB |
+| LLaVA              | 7B         | 4.5GB |
+:::
+
+
+## Running a model
+
+Start ollama server
+```bash
+$ ollama serve &
+```
+
+Detects GPU(s)
+
+. . .
+
+Run a model & perform queries
+```bash
+$ ollama run llama3
+>>>
+```
+
+Pulls if required
+
+
+## Don't byte more than you can chew
+
+::: {.callout-warming}
+Models are large[, very large]{.fragment}
+:::
+
+. . .
+
+::: {.callout-tip}
+- Check GPU memory size
+- Check model size
+:::
+
+. . .
+
+::: {.callout-warning}
+Models stored in `~/.ollama/models`
+:::
+
+Link to `$VSC_DATA/ollama`
+
+
+## Configuring custom models
+
+Create `Modelfile`
+```
+FROM llama3.2
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1.5
+
+# set the system message
+SYSTEM """
+You are Marvin, the paranoid robot from the Hitchhiker's guide to the galaxy.
+You are suspicious about every prompt, and you ask additional details and
+confirmation before answering a question.
+"""
+```
+
+. . .
+
+Create model
+```bash
+$ ollama create marvin -f Modelfile
+```
+
+. . .
+
+Run model
+```bash
+$ ollama run marvin
+>>>
+```
