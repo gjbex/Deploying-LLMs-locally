@@ -1,0 +1,150 @@
+.. _plugins:
+
+#######
+Plugins
+#######
+
+********
+Overview
+********
+
+{AProject} plugin is a package that can be dynamically loaded by the
+{Project} runtime, augmenting {Project} with experimental, non-standard
+and/or vendor-specific functionality.
+
+Plugins can influence the behaviour of {Project} in specific ways:
+
+* A cli plugin can use the ``Command`` callback to add or modify CLI
+  subcommands and/or flags.
+* A cli plugin can use the ``ApptainerEngineConfig`` callback to change the
+  container configuration before it is passed to the runtime, e.g. adding bind
+  mounts etc.
+* A runtime plugin can use the ``MonitorContainer`` callback to watch the
+  container process as it is executing.
+* A runtime plugin can use the ``PostStartProcess`` callback to carry out a task
+  after the container has been started.
+* A runtime plugin can use the ``RegisterImageDriver`` callback to implement an
+  alternative way of providing a container image to execute.
+
+**************************
+Limitations / Requirements
+**************************
+
+The way that plugin functionality is implemented in the Go language, which
+{Project} is written with, is quite restrictive.
+
+Go plugins must be built with the same Go version, and set of dependencies, as
+the main program they will be loaded into. This means it is generally
+impractical to develop and build plugins except in lock-step with the main
+{Project} source tree.
+
+Functionality that can be implemented with plugins is limited to the scope of
+the exposed plugin callbacks. Container runtimes such as {Project} execute
+using multiple processes, with distinct boundaries that limit the influence a
+plugin can have.
+
+If you are considering writing a plugin for {Project} you may wish to
+investigate whether the feature can be contributed to the main source tree
+directly via a PR. This simplifies future maintenance, and avoids the
+limitations of Go plugins.
+
+*************
+Using Plugins
+*************
+
+The ``list`` command prints the currently installed plugins.
+
+.. code::
+
+   $ {command} plugin list
+   There are no plugins installed.
+
+Plugins are packaged and distributed as binaries encoded with the versatile
+Singularity Image Format (SIF). However, plugin authors may also distribute the
+source code of their plugins. A plugin can be compiled from its source code with
+the ``compile`` command. A number of example plugins are included in the
+``examples/plugins`` directory of the {Project} source.
+
+.. code::
+
+   $ {command} plugin compile examples/plugins/cli-plugin/
+   INFO:    Plugin built to: /home/dtrudg/Git/apptainer/examples/plugins/cli-plugin/cli-plugin.sif
+
+Upon successful compilation, a SIF file will appear in the directory of the
+plugin's source code.
+
+.. code::
+
+   $ ls examples/plugins/cli-plugin/ | grep sif
+   cli-plugin.sif
+
+.. note::
+
+   Due to the structure of the {Project} project, and the strict
+   requirements of Go plugin compilation, **all** plugins must be compiled from
+   within the {Project} source code tree.
+
+   The ability to compile plugins outside of the {Project} tree, that
+   previously existed, has been removed due to incompatible changes in Go 1.18.
+
+Every plugin encapsulates various information such as the plugin's
+author, the plugin's version, etc. To view this information about a
+plugin, use the ``inspect`` command.
+
+.. code::
+
+   $ {command} plugin inspect examples/plugins/cli-plugin/cli-plugin.sif
+   Name: example.com/cli-plugin
+   Description: This is a short example CLI plugin for {Project}
+   Author: {Project} Team
+   Version: 0.1.0
+
+To install a plugin, use the ``install`` command. This operation
+requires root privilege.
+
+.. code::
+
+   $ sudo {command} plugin install examples/plugins/cli-plugin/cli-plugin.sif
+   $ {command} plugin list
+   ENABLED  NAME
+       yes  example.com/cli-plugin
+
+After successful installation, the plugin will automatically be enabled.
+Any plugin can be disabled with the ``disable`` command and re-enabled
+with the ``enable`` command. Both of these operations require root
+privilege.
+
+.. code::
+
+   $ sudo {command} plugin disable example.com/cli-plugin
+   $ {command} plugin list
+   ENABLED  NAME
+        no  example.com/cli-plugin
+
+   $ sudo {command} plugin enable example.com/cli-plugin
+   $ {command} plugin list
+   ENABLED  NAME
+       yes  example.com/cli-plugin
+
+Finally, to uninstall a plugin, use the ``uninstall`` command. This
+operation requires root privilege.
+
+.. code::
+
+   $ sudo {command} plugin uninstall example.com/cli-plugin
+   Uninstalled plugin "example.com/cli-plugin".
+
+   $ {command} plugin list
+   There are no plugins installed.
+
+****************
+Writing a Plugin
+****************
+
+Developers interested in writing {Project} plugins can get started
+by reading the `Go documentation
+<https://godoc.org/github.com/{orgrepo}/pkg/plugin>`_ for the
+plugin package.
+
+Example plugins can be found in the {Project} `source code
+<https://github.com/{orgrepo}/tree/{repobranch}/examples/plugins>`_.
