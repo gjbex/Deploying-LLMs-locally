@@ -20,10 +20,16 @@ index = VectorStoreIndex.from_documents(documents)
 # Perform RAG query
 query_engine = index.as_query_engine()
 
+# Terms to substitute in the response
+terms = {
+        'project': 'Apptainer documentation',
+        'command': 'apptainer',
+}
+
 while True:
     query = input("Enter query: ")
     if query == "exit":
         break
     response = query_engine.query(query)
-    print('\n' + response)
+    print('\n' + str(response).format(**terms))
     print('\n' + '='*72 + '\n')
