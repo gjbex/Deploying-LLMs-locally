@@ -1,0 +1,9 @@
+BootStrap: docker
+From: ollama/ollama:latest
+%post
+    . /.singularity.d/env/10-docker*.sh
+
+%runscript
+    exec ollama "$@"
+
+
