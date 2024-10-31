@@ -10,6 +10,8 @@ be used to download and run models.
    based on a pre-trained model.  It sets the temperature of the model
    and provides a system prompt to make the model act like Marvin, the
    paranoid android from the Hitchhiker's Guide to the Galaxy.
+1. `images`: a directory containing images that can be used to test
+   interact with multimodal models.
 
 
 ## How to use it?
