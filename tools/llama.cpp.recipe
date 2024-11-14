@@ -1,0 +1,14 @@
+BootStrap: docker
+From: ghcr.io/ggerganov/llama.cpp:full-cuda
+%post
+    . /.singularity.d/env/10-docker*.sh
+
+%environment
+    export PATH=/app:$PATH
+%post
+    export PATH=/app:$PATH
+
+%runscript
+    exec llama-cli "$@"
+
+
