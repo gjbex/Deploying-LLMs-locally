@@ -9,3 +9,7 @@ This directory contains tools that are used for this training.
    definition file for running the Ollama application.
 1. `ollama.recipe`: a Singularity recipe for building an image to run
    Ollama.
+1. `llama.cpp.py`: an hpccm script to generate a Dockerfile or Singularity
+   definition file for building the llama.cpp application.
+1. `llama.cpp.recipe`: a Singularity recipe for building an image to build
+   an image to run llama.cpp.
