@@ -17,3 +17,4 @@ prohibitively large to store in the repository.
    logging in to download.)
 1. `convert-hf-model-to-gguf.sh`: script to convert a Hugging Face model to a
    GGUF model.  (**Note**: you need an Apptainer image for LLaMa.cpp.)
+1. `batched-bench.sh`: script to run a batched benchmark on a model.
