@@ -3,10 +3,18 @@ From: ghcr.io/ggerganov/llama.cpp:full-cuda
 %post
     . /.singularity.d/env/10-docker*.sh
 
-%environment
-    export PATH=/app:$PATH
 %post
-    export PATH=/app:$PATH
+    apt-get update -y
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        git \
+        unzip \
+        wget
+    rm -rf /var/lib/apt/lists/*
+
+%environment
+    export PATH=/app:/bin:$PATH
+%post
+    export PATH=/app:/bin:$PATH
 
 %runscript
     exec llama-cli "$@"
