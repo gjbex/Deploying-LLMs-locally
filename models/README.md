@@ -15,3 +15,5 @@ prohibitively large to store in the repository.
    Hugging Face. (**Note**: this is a gated model, so you need to request
    access to it.  Consequently, it requires a Hugging Face access token and
    logging in to download.)
+1. `convert-hf-model-to-gguf.sh`: script to convert a Hugging Face model to a
+   GGUF model.  (**Note**: you need an Apptainer image for LLaMa.cpp.)
