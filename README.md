@@ -12,4 +12,5 @@ various AI tools and techniques.
 1. `environment.yml`: conda environment file to create an environment
    with all dependencies.
 1. `models`: directory with scripts to download pre-trained models.
+1. `data`: directory with scripts to download data.
 1. `tools`: directory with tools to run LLMs on a local machine.
