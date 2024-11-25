@@ -16,7 +16,8 @@ This directory cntains some examples of data preprocessing.
    The output is in JSONL format, with each question-answer pair on a single
    line.
 1. `pandas_data_analysis_questions.csv`: "CSV" file containing the pandas data
-   analysis FAQ. (Source: Hugging Face
-   DinaZahran/pandas_data_analysis_questions dataset.)
+   analysis FAQ. (Source: Hugging Face DinaZahran/pandas_data_analysis_questions
+   dataset.)
+>>>>>>> 37aa4cc1d81d682bf704548dffb41147bcc63a69
 1. `pandas_data_analysis_questions.jsonl`: JSONL file containing the pandas
    data analysis FAQ in a structured format.
