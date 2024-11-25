@@ -40,7 +40,7 @@ def main():
         doc = BeautifulSoup(html_file, features='html.parser')
     json_strs = []
     for tag in doc.find_all(is_question_header):
-        json_strs.append(f'{{"input": "{get_question(tag)}"", "output": "{get_answer(tag)}"}}')
+        json_strs.append(f'{{"input": "{get_question(tag)}", "output": "{get_answer(tag)}"}}')
     print('\n'.join(json_strs))
 
 if __name__ == '__main__':
