@@ -18,6 +18,7 @@ This directory cntains some examples of data preprocessing.
 1. `pandas_data_analysis_questions.csv`: "CSV" file containing the pandas data
    analysis FAQ. (Source: Hugging Face DinaZahran/pandas_data_analysis_questions
    dataset.)
->>>>>>> 37aa4cc1d81d682bf704548dffb41147bcc63a69
 1. `pandas_data_analysis_questions.jsonl`: JSONL file containing the pandas
    data analysis FAQ in a structured format.
+1. `split_jsonl.py`: Python script that reads a JSONL file, and splits into
+   two files, one containing the training data, the other the test data.
