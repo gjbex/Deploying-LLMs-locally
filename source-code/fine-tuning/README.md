@@ -6,6 +6,8 @@ model on a new dataset.
 
 ## What is it?
 
+1. `environment.yml`: conda environment file for installing the necessary
+   dependencies.
 1. `fine_tuning.ipynb`: Jupyter notebook that demonstrates how to fine-tune a
    pre-trained model on a new dataset.
 1. `pandas_data_analysis_questions_train.jsonl`: JSONL file containing a dataset

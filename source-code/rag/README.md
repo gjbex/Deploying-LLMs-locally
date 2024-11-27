@@ -6,6 +6,8 @@ llamma-index.
 
 ## What is it?
 
+1. `environment.yml`: a conda environment file that specifies the dependencies
+   for the examples.
 1. `texts`: a directory containing text files that can be used as documents for
    retrieval.  The text files are in `.rst` format, and are the [documentation
    of Apptainer](https://apptainer.readthedocs.io/en/latest/).
