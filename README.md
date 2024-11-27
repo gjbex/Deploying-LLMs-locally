@@ -15,3 +15,6 @@ various AI tools and techniques.
 1. `data`: directory with scripts to download data.
 1. `tools`: directory with tools to run LLMs on a local machine.
 1. `docs`: directory for a web site on this training.
+1. `CONTRIBUTING.md`: guidelines for contributing to this repository.
+1. `LICENSE`: license information for this repository.
+1. `CODE_OF_CONDUCT.md`: code of conduct for this repository and training.
