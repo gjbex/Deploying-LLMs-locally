@@ -15,3 +15,5 @@ This directory contains tools that are used for this training.
    an image to run llama.cpp.
 1. `apptainer_build.slurm`: a Slurm script to build an Apptainer image.
    (Note: you may have to adapt this script to your environment.)
+1. `mamba_init.sh`: Bash file that initializes conda/mamba for use in job
+   scripts.
