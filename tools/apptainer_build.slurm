@@ -1,7 +1,7 @@
 #!/usr/bin/env -S bash -l
 #SBATCH --account=lp_gpgpu_training
 #SBATCH --nodes=1  --ntasks=1  --gpus-per-node=1
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --cluster=genius  --partition=gpu_p100
 
 if [ -z $RECIPE ]
