@@ -1,3 +1,6 @@
 # direnv configuration file
 .envrc
 /~$local_LLMs.pptx
+
+# Slurm output files
+slurm-[0-9]*.out
