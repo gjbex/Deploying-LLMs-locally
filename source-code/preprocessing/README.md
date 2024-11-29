@@ -5,6 +5,8 @@ This directory contains some examples of data preprocessing.
 
 ## What is it?
 
+1. `environment.yml`: conda environment file for installing the necessary
+   dependencies.
 1. `preprocess_openmp_faq.py`: Python script that reads the OpenMP FAQ from an
    HTML file, and writes the output to standard output.  The output is in JSONL
    format, with each question-answer pair on a single line.
