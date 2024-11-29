@@ -1,6 +1,6 @@
 # Preprocessing
 
-This directory cntains some examples of data preprocessing.
+This directory contains some examples of data preprocessing.
 
 
 ## What is it?
