@@ -9,5 +9,5 @@ Usage:
 # Choose a base image
 Stage0.baseimage('ollama/ollama:latest')
  
-# add run script, i.e., start bash
+# add run script, i.e., start ollama
 Stage0 += runscript(commands=['ollama'])
