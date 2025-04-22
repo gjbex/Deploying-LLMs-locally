@@ -1,7 +1,7 @@
-# AI tools
+# Deploying LLMs locally
 
-This is a repository that illustrates the use of
-various AI tools and techniques.
+This is a repository that illustrates the use of various AI tools and
+techniques and how to use them on local infrastructure such as HPC systems.
 
 
 ## What is it?
