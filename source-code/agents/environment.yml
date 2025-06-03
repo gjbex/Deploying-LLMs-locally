@@ -1,4 +1,4 @@
-name: agentic_ai
+name: ai_tools_agents
 channels:
   - conda-forge
 dependencies:

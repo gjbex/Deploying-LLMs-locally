@@ -27,7 +27,7 @@ conda env create -f environment.yml
 Then, activate the environment:
 
 ```bash
-conda activate agentic_ai
+conda activate ai_tools_agents
 ```
 
 Next, start the ollama server:
