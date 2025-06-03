@@ -12,3 +12,4 @@ various AI tools.
 1. `rag`: illustrates how to use the RAG model to interact with an AI model and
    a collection of documents.
 1. `prepare_data.py`: scripts to prepare data for machine learning tasks.
+1. `agents`: illustration of implementing AI agents.
