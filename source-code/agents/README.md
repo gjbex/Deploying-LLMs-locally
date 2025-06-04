@@ -3,6 +3,8 @@
 Agents use LLMs to perform tasks, but can also use tools to help them do so.
 They can be used to automate tasks, answer questions, or perform other actions.
 
+Framework: [CrewAI](https://www.crewai.com/open-source)
+
 
 ## What is it?
 
