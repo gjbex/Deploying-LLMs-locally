@@ -59,6 +59,13 @@ from scratch.
 Familiarity with Linux or HPC environments is recommented.
 
 
+## Level
+
+* Introductory: 30 %
+* Intermetiate: 40 %
+* Advanced: 30 %
+
+
 ## Trainer(s)
 
   * Geert Jan Bex ([geertjan.bex@uhasselt.be](mailto:geertjan.bex@uhasselt.be))
