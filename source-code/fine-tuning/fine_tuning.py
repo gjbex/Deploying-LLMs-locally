@@ -3,8 +3,10 @@
 from datetime import datetime
 import os
 import sys
-from accelerate import Accelerator
 from dotenv import load_dotenv
+load_dotenv()
+
+from accelerate import Accelerator
 from datasets import load_dataset
 from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 import torch
@@ -41,7 +43,7 @@ def print_trainable_parameters(model):
     )
 
 # os.environ['BNB_CUDA_VERSION'] = '120'
-load_dotenv()
+
 
 train_dataset = load_dataset(
     'json',
