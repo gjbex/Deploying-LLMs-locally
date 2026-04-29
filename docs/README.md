@@ -50,21 +50,24 @@ hands-on material.
 This training is for you if you need to deploy Larqe Language Models (LLMs) on
 your own infrastructure.
 
-For following along hands-on, you need * laptop or desktop with internet access.
-* a system set up so you can connect to an HPC system, an account on an HPC
-  system (e.g., VSC, CECI, ...), compute credits if that is required to run
-  jobs on the HPC system if you want to use an HPC system;
-* a Python environment that can run Jupyter Lab if you want to use your own
-  system (note that you would require a GPU for most of the examples to work);
-* access to Google Colaboratory if you prefer not to install software.
-
-
 ## Prerequisites
 
 You will need experience programming in Python.  This is not a training that starts
 from scratch.
 
 Familiarity with Linux or HPC environments is recommented.
+
+
+### Software and access requirements
+
+For following along hands-on, you need
+* laptop or desktop with internet access.
+* a system set up so you can connect to an HPC system, an account on an HPC
+  system (e.g., VSC, CECI, ...), compute credits if that is required to run
+  jobs on the HPC system if you want to use an HPC system;
+* a Python environment that can run Jupyter Lab if you want to use your own
+  system (note that you would require a GPU for most of the examples to work);
+* access to Google Colaboratory if you prefer not to install software.
 
 
 ## Level
