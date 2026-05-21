@@ -50,21 +50,42 @@ hands-on material.
 This training is for you if you need to deploy Larqe Language Models (LLMs) on
 your own infrastructure.
 
-For following along hands-on, you need * laptop or desktop with internet access.
-* a system set up so you can connect to an HPC system, an account on an HPC
-  system (e.g., VSC, CECI, ...), compute credits if that is required to run
-  jobs on the HPC system if you want to use an HPC system;
-* a Python environment that can run Jupyter Lab if you want to use your own
-  system (note that you would require a GPU for most of the examples to work);
-* access to Google Colaboratory if you prefer not to install software.
-
-
 ## Prerequisites
 
 You will need experience programming in Python.  This is not a training that starts
 from scratch.
 
 Familiarity with Linux or HPC environments is recommented.
+
+
+### Quick self-assessment
+
+If you can do most of the tasks below, you are likely ready for this training.
+
+* run Python code in a script or notebook;
+* install or activate a Python environment and import installed packages;
+* use the command line to run commands and inspect output;
+* explain at a high level what a machine-learning model does during inference;
+* understand the difference between local files and online services;
+* work with text files or small document collections as input data;
+* log in to a remote Linux or HPC system if that is where the examples will run;
+* make a small change to an example command or script and run it again.
+
+If several of these items still feel difficult, the training will probably move
+too fast. In that case, it is better to first refresh basic Python, command-line
+use, and the local or remote environment you plan to use.
+
+
+### Software and access requirements
+
+For following along hands-on, you need
+* laptop or desktop with internet access.
+* a system set up so you can connect to an HPC system, an account on an HPC
+  system (e.g., VSC, CECI, ...), compute credits if that is required to run
+  jobs on the HPC system if you want to use an HPC system;
+* a Python environment that can run Jupyter Lab if you want to use your own
+  system (note that you would require a GPU for most of the examples to work);
+* access to Google Colaboratory if you prefer not to install software.
 
 
 ## Level
