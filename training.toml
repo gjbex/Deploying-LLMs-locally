@@ -1,0 +1,139 @@
+schema_version = 2
+id = "deploying-llms-locally"
+title = "Deploying LLMs locally"
+content_language = "en"
+summary = """
+Large Language Models (LLMs) are a class of machine learning models that have recently gained a lot of attention. These models are trained on large amounts of data and after training can be used in many applications. Although models from OpenAI and Google can be used as services online, it is often desirable to have a model that can be used offline. This training will show you how to deploy and use such models locally.
+"""
+languages = ["Python"]
+
+[[learning_outcomes]]
+statement = "Understand what LLMs are and how they are trained."
+competencies = ["large-language-models.training-and-inference-concepts"]
+
+[[learning_outcomes]]
+statement = "Be able to use a pre-trained LLM for text generation."
+competencies = ["large-language-models.generate-text-with-pretrained-models"]
+
+[[learning_outcomes]]
+statement = "Be able to use Retrieval Augmented Generation (RAG) for question answering on your own data."
+competencies = ["large-language-models.retrieval-augmented-generation"]
+
+[[learning_outcomes]]
+statement = "Understand how quantization works and how it can be used to reduce the size of a model."
+competencies = ["large-language-models.quantization"]
+
+[[learning_outcomes]]
+statement = "Be able to fine-tune a pre-trained LLM for a specific task."
+competencies = ["large-language-models.fine-tune-pretrained-models"]
+
+[source]
+metadata_document = "docs/README.md"
+repository_url = "https://github.com/gjbex/Deploying-LLMs-locally/"
+website_url = "https://gjbex.github.io/Deploying-LLMs-locally/"
+license = "CC-BY-4.0"
+
+[delivery]
+duration_minutes = 390
+duration_kind = "fixed"
+session_count = 1
+target_session_duration_minutes = 390
+schedule_complete = true
+description = """
+Total duration: 6.5 hours.
+"""
+
+[audience]
+description = """
+This training is for you if you need to deploy Larqe Language Models (LLMs) on your own infrastructure.
+"""
+
+[prerequisites]
+summary = """
+You will need experience programming in Python. This is not a training that starts from scratch. Familiarity with Linux or HPC environments is recommented.
+"""
+competencies = ["python.run-code", "python.import-modules", "python.activate-software-environment", "command-line.run-or-compile-programs", "machine-learning.inference-concept"]
+
+[self_assessment]
+introduction = """
+If you can do most of the tasks below, you are likely ready for this training.
+"""
+tasks = [
+  "Run Python code in a script or notebook.",
+  "Install or activate a Python environment and import installed packages.",
+  "Use the command line to run commands and inspect output.",
+  "Explain at a high level what a machine-learning model does during inference.",
+  "Understand the difference between local files and online services.",
+  "Work with text files or small document collections as input data.",
+  "Log in to a remote Linux or HPC system if that is where the examples will run.",
+  "Make a small change to an example command or script and run it again."
+]
+
+[requirements]
+software = [
+  "Laptop or desktop with internet access.",
+  "A system set up so you can connect to an HPC system, an account on an HPC system (e.g., VSC, CECI, ...), compute credits if that is required to run jobs on the HPC system if you want to use an HPC system.",
+  "A Python environment that can run Jupyter Lab if you want to use your own system (note that you would require a GPU for most of the examples to work).",
+  "Access to Google Colaboratory if you prefer not to install software."
+]
+
+[[materials]]
+kind = "slides"
+path = "local_LLMs.pptx"
+
+[[materials]]
+kind = "source-code"
+path = "source-code"
+
+[[trainers]]
+name = "Geert Jan Bex"
+email = "geertjan.bex@uhasselt.be"
+
+[[maintainers]]
+name = "Geert Jan Bex"
+email = "geertjan.bex@uhasselt.be"
+
+[[sessions]]
+id = "session-1"
+title = "Session one"
+duration_minutes = 390
+
+[[sessions.items]]
+subject = "preparation"
+duration_minutes = 20
+
+[[sessions.items]]
+subject = "introduction and motivation"
+duration_minutes = 10
+
+[[sessions.items]]
+subject = "neural networks: the basics"
+duration_minutes = 15
+
+[[sessions.items]]
+subject = "large language models"
+duration_minutes = 90
+
+[[sessions.items]]
+subject = "local deployment"
+duration_minutes = 30
+
+[[sessions.items]]
+subject = "simple applications"
+duration_minutes = 10
+
+[[sessions.items]]
+subject = "Retrieval Augmented Generation (RAG)"
+duration_minutes = 50
+
+[[sessions.items]]
+subject = "quantization"
+duration_minutes = 60
+
+[[sessions.items]]
+subject = "fine-tuning models"
+duration_minutes = 60
+
+[[sessions.items]]
+subject = "wrap up"
+duration_minutes = 10
